@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+<div class="site-container">
+  <div class="menu-overlay"></div>
+  <div class="scroll">
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+  </div>
+  <main class="main">
+    @include('partials/hero.html')
+    @include('partials/about.html')
+    @include('partials/services.html')
+    @include('partials/directions.html')
+    @include('partials/events.html')
+    @include('partials/contact.html')
+    @include('partials/partners.html')
+<!--    @include('partials/investments.html')-->
+    <a href="#hero" class="btn-reset btn-up visually-hidden" data-scroll>
+      <img src="./img/arrow.svg"/>
+    </a>
+  </main>
+    @include('partials/footer.html')
+</div>
+</body>
+
+</html>

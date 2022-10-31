@@ -55,6 +55,11 @@ p {
   padding: 0;
 }
 
+.main {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,30,196,1) 35%, rgba(0,212,255,1) 100%);
+}
+
 .site-container {
   position: relative;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
@@ -201,9 +206,10 @@ p {
 
 .section-title {
   font-family: var(--font-Montserrat-Regular);
-  font-size: 50px;
-  line-height: 90px;
-  color: var(--dark-color);
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--light-color);
+  margin-bottom: 50px;
 }
 
 .marquee__wrapper {

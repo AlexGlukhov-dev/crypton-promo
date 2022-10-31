@@ -1,9 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 1287px;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,30,196,1) 35%, rgba(0,212,255,1) 100%);
+  margin-bottom: 50px;
 
   &__container {
     display: grid;
@@ -16,37 +14,6 @@
 
     @include small-tablet {
       padding-top: 23px;
-    }
-  }
-
-  .menu {
-    position: fixed;
-    left: 10%;
-    top: 0;
-    z-index: 110;
-
-    @include small-tablet {
-      left: 0;
-      top: -28px;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-
-    .overlay {
-      position: absolute;
-      z-index: 1;
-      background-color: rgb(0 0 0 / 30%);
-      inset: 0;
-    }
-
-    .hero__gallery {
-      position: relative;
-      overflow: hidden;
-      height: 100%;
     }
   }
 
@@ -105,7 +72,7 @@
     z-index: 2;
     justify-self: center;
     grid-column: 1 / 4;
-    padding-top: 260px;
+    padding: 260px 0;
     max-width: 760px;
     font: var(--font-Montserrat-SemiBold);
     font-size: 50px;
@@ -113,162 +80,22 @@
     text-align: center;
     text-transform: uppercase;
     color: #fff;
+  }
 
-    span {
-      font-size: 90px;
-      line-height: 160px;
+  &__info {
+    grid-column: 2/3;
+    margin: 50px auto;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+  }
 
-      @include big-desktop {
-        font-size: 70px;
-        line-height: 86px;
-      }
-
-      @include small-tablet {
-        font-size: 40px;
-        line-height: 48px;
-      }
+  ul {
+    li {
+      color: var(--light-color);
+      font-size: 26px;
+      padding-left: 16px;
     }
-
-    @include big-desktop {
-      font-size: 30px;
-      line-height: 40px;
-    }
-
-    @include small-tablet {
-      padding-top: 95px;
-      max-width: 296px;
-      font-size: 20px;
-      line-height: 40px;
-    }
-  }
-
-  &__btn {
-    display: none;
-    grid-column: 3;
-
-    @include big-desktop {
-      bottom: 20px;
-    }
-
-    @include small-tablet {
-      bottom: -100px;
-      justify-self: center;
-      grid-column: 2;
-      width: 160px;
-      height: 160px;
-    }
-  }
-
-  .layer {
-    position: absolute;
-    z-index: 0;
-    transition: 0.15s ease;
-  }
-
-  .bg-img-1 {
-    position: absolute;
-    left: 50px;
-    top: 90px;
-    z-index: 0;
-  }
-
-  .bg-img-2 {
-    left: 160px;
-    bottom: 156px;
-  }
-
-  .bg-img-3 {
-    left: 560px;
-    bottom: 380px;
-
-    @include big-desktop {
-      display: none;
-    }
-  }
-
-  .bg-img-4 {
-    left: 34%;
-    top: 10%;
-    z-index: 1;
-  }
-
-  .bg-img-5 {
-    right: -53px;
-    top: 0;
-  }
-
-  .bg-img-6 {
-    right: 75px;
-    bottom: 125px;
-  }
-
-  .bg-img-7 {
-    right: 220px;
-    bottom: 400px;
-
-    @include big-desktop {
-      display: none;
-    }
-  }
-
-  @include small-tablet {
-    height: 560px;
-  }
-}
-
-.menu-button {
-  position: absolute;
-  left: 15px;
-  top: 40px;
-  z-index: 15;
-  color: #fff;
-  transition: opacity 1s;
-  transition-delay: 0s;
-  transition-timing-function: ease;
-  cursor: pointer;
-}
-
-.rotated {
-  width: 120px;
-  height: 120px;
-  font-size: 16px;
-  background-image: url("../../img/menu.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @include big-desktop {
-    width: 88px;
-    height: 88px;
-  }
-
-  @include small-tablet {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-.square {
-  position: absolute;
-  left: 75px;
-  top: 100px;
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-  background-color: var(--accent-color);
-  transform: translate(-50%, -50%);
-
-  @include big-desktop {
-    left: 59px;
-    top: 85px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @include small-tablet {
-    left: 45px;
-    top: 71px;
-    width: 15px;
-    height: 15px;
   }
 }
 
